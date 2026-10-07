@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Dedupe",
+  "version": "2.1.0",
+  "description": "Keeps a single Chrome tab per entity across GitHub PRs, Amplitude charts/dashboards, Sentry issues, Jira tickets and Claude artifacts. Clicking a link to something already open navigates the existing tab instead of opening a new one.",
+  "permissions": ["tabs"],
+  "host_permissions": [
+    "https://github.com/*",
+    "https://app.amplitude.com/*",
+    "https://*.sentry.io/*",
+    "https://*.atlassian.net/*",
+    "https://claude.ai/code/artifact/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
